@@ -122,9 +122,6 @@ function addAnswer(elem)
         createdElement = document.createElement("ul");
         createdElement.class = "likert";
 
-        //li
-       
-
 
         //input  
         var dots = 5;
@@ -133,50 +130,61 @@ function addAnswer(elem)
             var li = document.createElement("li");
             li.class = "likert";
             
+            textInput = document.createElement("input");
             input = document.createElement("input");
+            var textArea = document.createElement("a");
             if(p == 0)
             {  
                 input.id = "likertStart";
-                li.innerHTML = "I hate it."
+                textArea.innerText = "I love it.";
+                
             }
             else if(p == dots-1)
             {
                 input.id = "likertEnd";
+                textArea.innerText = "I hate it.";
+
+            }
+            else if(p == 2)
+            {
+                input.id = "likertMiddle";
+                textArea.innerText = "Don't care"
+
             }
             else
             {
-                input.id = "likertMid";
+                input.id = "likertIntermediate";
+                textArea.innerText = "----------";
+
             }
 
-            input.type = "radio";
-            input.name = "Likert";
+            input.type  = "radio";
+            input.name  = "Likert";
             input.value = p+1;
+            li.appendChild(textArea);
             li.appendChild(input);
-
+            if(p == 0 || p == 2 || p == dots-1)
+            {  
+                textInput.id = "textInput";
+                li.appendChild(textInput);    
+                li.addEventListener("input", setLikertPhrase); 
+            }
             
+           
             createdElement.appendChild(li);
-
-
+            
         }
-
-
-
-
-        //put inputs into the li
-        
-
-        //put the li into the ul
-
     }
     else if(value === "Fill in the Blank")
     {
         //add later if(one exists already){dont make another}
-        createdElement = document.createElement("textarea");
+        var textArea = document.createElement("textarea");
+        createdElement = document.createElement("li");
         
+        textArea.placeholder = "answer";
+        createdElement.appendChild(textArea);
         //set the to answer
-        createdElement.placeholder = "answer";
 
-        //put the input in the list and put the element in the list
     }
     else if(value === "Picture Choice")
     {
@@ -187,6 +195,13 @@ function addAnswer(elem)
     element.appendChild(createdElement);
 
 }
+
+function setLikertPhrase()
+{
+    this.children[0].innerText = this.children[2].value;
+}
+
+
 
 
 function subtractAnswer(elem) 
