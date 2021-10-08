@@ -1,0 +1,6 @@
+#questionTemplate {
+    visibility: hidden;
+    position: absolute;
+    margin-top: -100px;
+    margin-left: -100px;
+}

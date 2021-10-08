@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+  <header>
+    <script src="js/script.js"></script>
+  </header>
+  <head>
+    <title>Super Cool Webpage: Survey</title>
+  </head>
+
+  <body>
+    <header>
+      <h1 class = "head">Dr. Reevus' Droids Survey</h1>
+      <div class="headerLinks">
+        <form action="adminSurveyView.html">
+          <input type="submit" value="Admin Survey View" />
+        </form> 
+        <form action="userSurveyView.html">
+          <input type="submit" value="User Survey View" />
+        </form> 
+        <form action="surveyBuild.html">
+          <input type="submit" value="Build a New Survey" />
+        </form>
+        <form action="about.html">
+          <input type="submit" value="About" />
+        </form>  
+        <form action="signOut.html">
+          <input type="submit" value="Sign-Out" />
+        </form>
+        <form action="reevous.html">
+          <input type="submit" value="Reevus" />
+        </form>
+      </div>
+      <h2>Admin View</h1>
+      
+      <hr>
+
+    </header>
+
+    <h2>Approved Surveys</h2>
+    <ul class = "approvedSurveys">
+      <li>
+        <div>
+          <a href="surveyBuild.html">My first survey 1</a>, <em>-This is my first survey I think its neat-</em> Date, Submitted by Nic, Approved by Brett
+        </div>
+        <input type="button" value="Remove" onclick="removeSurvey(this)"> 
+      </li>
+
+      <li>
+        <div>
+          <a href="surveyBuild.html">Blee Serve</a>, <em>-Awesome blee service 10/10-</em> Date, Submitted by Brett, Approved by Carter
+        </div>
+        <input type="button" value="Remove" onclick="removeSurvey(this)"> 
+      </li>
+
+      <li>
+        <div>
+          <a href="surveyBuild.html">Number Survey</a>, <em>-Im losing it here-</em> Date, Submitted by Carter, Approved by Nic
+          
+        </div>
+        <input type="button" value="Remove" onclick="removeSurvey(this)"> 
+      </li>
+    </ul>
+
+    <form action="surveyBuild.html">
+      <input type="submit" value="Build a New Survey" />
+    </form> 
+
+
+    <h2>Submitted Surveys (Need Approval)</h2>
+    <ul id = "submittedSurveys">
+      <li>
+        <div>
+          <a href="surveyBuild.html">IceCream</a>, <em>-Icecream and what kinds you like.-</em> 
+          Submitted by Dr. Reeves 
+            <input type="button" value="Approve" onclick="approveSurvey(this)"> 
+        </div>
+      </li>
+
+      <li>
+        <div>
+          <a href="surveyBuild.html">Survey Survey</a>, <em>-This survey is about surveys-</em> 
+          Submitted by Brett
+          <input type="button" value="Approve" onclick="approveSurvey(this)"> 
+        </div>
+      </li> 
+
+      <li>
+        <div>
+          <a href="surveyBuild.html">Dogs</a>, <em>-What type of dogs do you like?-</em> Submitted by Carter
+          <input type="button" value="Approve" onclick="approveSurvey(this)"> 
+        </div>
+      </li> 
+    </ul>
+    
+    
+
+    
+    
+
+  </body>
+</html>

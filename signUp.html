@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Super Cool Webpage: Surveys</title>
+    <script src="js/script.js"></script>
+    <style></style>
+  </head>
+
+  <body>
+    <header>
+      <h1 class = "head">Dr. Reevus' Droids Survey</h1>
+      
+      <hr>
+
+    </header>
+
+    <form action="adminSurveyView.html">
+        <div>
+          <label  for="uname">Username</label>
+          <input id="uname" type="text" name="uname" placeholder="Enter Username" required>
+        </div>
+
+        <div>
+          <label for="uemail">Email</label>
+          <input id ="uemail" type="email" name="uemail" placeholder="Enter Email" required>
+        </div>
+
+        <div>
+          <label for="psw">Password</label>
+          <input id = "pw1" type="password" name="psw" placeholder="Enter Password"  onkeyup="return pwMatch()" required>
+        </div>
+        <div>
+          <label for="psw">Confirm Password</label>
+          <input id = "pw2" type="password" name="psw" placeholder="Confirm Password" onkeyup="return pwMatch()" required>
+        </div>
+        <div id="pwLengthCheck">
+        </div>
+        <div id="pwMatchText">
+        </div>
+
+        <input type="submit" value="Create Account!" onclick="return pwMatch();"/>
+    </form>
+
+    <div class="container" style="background-color:#f1f1f1">
+      <div>
+        <span class="psw">Already have an account? Sign in below. </span>
+      </div>
+    </div>
+
+    <form action="userSurveyView.html">
+
+      <div>
+        <label for="uname">Username</label>
+        <input type="text" name="uname" placeholder="Enter Username"  required>
+      </div>
+
+      <div>
+        <label for="psw">Password</label>
+        <input type="password" name="psw" placeholder="Enter Password"  required>
+      </div>
+
+      <label>
+        <input type="checkbox" checked="checked" name="remember"> Remember me
+      </label>
+
+      <input type="submit" value="Login"/>
+  </form>
+
+   
+  <button onclick="callPSQL()">PSQL</button>
+      
+    
+      
+
+      
+
+
+  </body>
+</html>
+
+

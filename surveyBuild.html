@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Super Cool Webpage: Survey</title>
+    <script src="js/script.js"></script>
+    <link rel="stylesheet" href="css/style.css">
+
+  </head>
+
+  <body>
+    <header>
+      <h1 class = "head">Dr. Reevus' Droids Survey</h1>
+
+      <div class="headerLinks">
+
+        <form action="adminSurveyView.html">
+          <input type="submit" value="Admin Survey View" />
+        </form> 
+        <form action="userSurveyView.html">
+          <input type="submit" value="User Survey View" />
+        </form> 
+        <form action="surveyBuild.html">
+          <input type="submit" value="Build a New Survey" />
+        </form>
+        <form action="about.html">
+          <input type="submit" value="About" />
+        </form>  
+        <form action="signOut.html">
+          <input type="submit" value="Sign-Out" />
+        </form>
+        <form action="reevous.html">
+          <input type="submit" value="Reevus" />
+        </form>
+
+      </div>
+      
+      <hr>
+
+    </header>
+
+    <form action="userSurveyView.html">
+      <input placeholder="Survey Title" required>
+      <input type="submit" value="Share"/>
+      <input type="submit" value="Save"/>
+      <input type="submit" value="Submit for Review"/>
+    </form>
+
+
+    <textarea placeholder="Description"></textarea>
+
+    <ol id = "questionList">
+      <!-- This is where questions will be created -->
+    </ol>
+
+    <!-- This <ol> <li> is an invisble template that will be copied to create new questions-->
+      <ol>
+        <li id = "questionTemplate">
+          <form id = "form">
+            <input placeholder="Question">
+            <label for="drpdn">Answer Type:</label>
+            <select id="drpdn" name="drpdn">
+              <option value="Multiple Choice">Multiple Choice</option>
+              <option value="Fill in the Blank">Fill in the Blank</option>
+              <option value="Likert Scale">Likert Scale</option>
+              <option value="Picture Choice">Picture Choice</option>
+            </select>
+            <input type="checkbox" id="Req" name="Req" value="Req">
+            <label for="Req"> Required</label>
+            <input type="button" value="- Question" onclick="subtractQuestion(this)" />
+          </form>
+          <hr>
+          <ol id = answerList type="A">
+            <!-- This is where answers will be created -->
+          </ol>
+          <div>
+            <input type="button" value="+ answer" onclick="addAnswer(this)"/>
+            <input type="button" value="- answer" onclick="subtractAnswer(this)"/>
+          </div>
+          <br>
+        </li>
+      </ol>
+
+      
+      <!-------------------------------------------------------------------------------->
+
+
+      <div>
+        <input type="button" value="+ Question" onclick="addQuestion()" />
+      </div>
+    
+
+  </body>
+</html>
