@@ -2,7 +2,6 @@
 <html lang="en">
   <head>
     <title>Super Cool Webpage: Survey</title>
-    <script src="js/script.js"></script>
     <link rel="stylesheet" href="css/style.css">
 
   </head>
@@ -31,18 +30,18 @@
         <form action="reevous.html">
           <input type="submit" value="Reevus" />
         </form>
-
+        <div class = "shareWith"></div>
       </div>
       
       <hr>
 
     </header>
 
-    <form action="userSurveyView.html">
-      <input placeholder="Survey Title" required>
-      <input type="submit" value="Share"/>
-      <input type="submit" value="Save"/>
+    <form class="optionsForm" action="userSurveyView.html">
+      <input placeholder="Survey Title">
+      <input type="button" value="Save" onclick="alert('Survey Saved')"/>
       <input type="submit" value="Submit for Review"/>
+      <input id="sharebutton" type="button" value="Share" onclick="share(this)"/>
     </form>
 
 
@@ -88,6 +87,8 @@
         <input type="button" value="+ Question" onclick="addQuestion()" />
       </div>
     
+      <script src="js/script.js"></script>
 
   </body>
 </html>
+

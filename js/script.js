@@ -1,3 +1,24 @@
+
+
+
+function share(elem){
+    
+    var parent = elem.parentNode;
+
+    for(const child of parent.children) {
+        if(child.id === "emailList")
+            return;
+      }
+    
+    var emailInput = document.createElement("input");
+    emailInput.id = "emailList";
+    emailInput.placeholder = "Enter a comma seperated email list.";
+    emailInput.style = "width: 230px";
+    parent.appendChild(emailInput);
+}
+
+
+
 function pwMatch() 
 {
     //test
