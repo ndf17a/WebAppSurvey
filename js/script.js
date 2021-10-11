@@ -94,7 +94,7 @@ function addAnswer(elem)
     var value;
     for (var i = 0; i < listChildren.length; i++) {
         //find this nodes form element
-        if(listChildren[i].id === "form")
+        if(listChildren[i].id === "answerForm")
         {
             //look inside the form childrenList
             for(var o = 0; o < listChildren[i].length; o++)
@@ -175,7 +175,6 @@ function addAnswer(elem)
             else
             {
                 input.id = "likertIntermediate";
-                textArea.innerText = "----------";
 
             }
 
@@ -196,7 +195,7 @@ function addAnswer(elem)
             
         }
     }
-    else if(value === "Fill in the Blank")
+    else if(value === "Short Answer")
     {
         //add later if(one exists already){dont make another}
         var textArea = document.createElement("textarea");
@@ -261,8 +260,7 @@ function approveSurvey(elem)
     elem.parentNode.insertBefore(document.createTextNode("Approved by Rick Astley"), elem);
 
     //get the list
-    var submittedSurveyList = document.getElementById("submittedSurveys");
-
+    var submittedSurveyList = document.getElementById("submittedSurveysID");
     //if there are 0 li put "no more surveys"
     if(submittedSurveyList.getElementsByTagName("li").length == 0)
     {
@@ -279,7 +277,7 @@ function approveSurvey(elem)
     }   
     
     //remove the approve button 
-    parent.children[0].removeChild(elem);
+    console.log(parent.children[0].removeChild(elem));
 }
 
 function removeSurvey(elem) 

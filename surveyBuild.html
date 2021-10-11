@@ -1,46 +1,35 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+  <header>
     <title>Super Cool Webpage: Survey</title>
     <link rel="stylesheet" href="css/style.css">
+  </header>
 
-  </head>
+  <div class ="heading">
+    <title>Super Cool Webpage: Survey</title>
+    <h1 class = "head">Dr. Reevus' Droids Survey</h1>
+    <div class="headerLinks">
+
+      <ul class="buttonlinks">
+        <li class="libutton"><a class="button" href="adminSurveyView.html">Survey Admin View</a></li>
+        <li class="libutton"><a class="button" href="userSurveyView.html">Survey User View </a></li>
+        <li class="libutton"><a class="button" href="surveyBuild.html">Build a New Survey</a></li>
+        <li class="libutton"><a class="button" href="about.html">About</a></li>
+        <li class="libutton"><a class="button" href="reevous.html">Reevous</a></li>
+        <li class="libutton"><a class="button" href="signOut.html">Sign Out</a></li>
+      </ul>
+    </div>
+    <h2>Build a new Survey</h2>
+    
+    <hr>
+    </div>
 
   <body>
-    <header>
-      <h1 class = "head">Dr. Reevus' Droids Survey</h1>
-
-      <div class="headerLinks">
-
-        <form action="adminSurveyView.html">
-          <input type="submit" value="Admin Survey View" />
-        </form> 
-        <form action="userSurveyView.html">
-          <input type="submit" value="User Survey View" />
-        </form> 
-        <form action="surveyBuild.html">
-          <input type="submit" value="Build a New Survey" />
-        </form>
-        <form action="about.html">
-          <input type="submit" value="About" />
-        </form>  
-        <form action="signOut.html">
-          <input type="submit" value="Sign-Out" />
-        </form>
-        <form action="reevous.html">
-          <input type="submit" value="Reevus" />
-        </form>
-        <div class = "shareWith"></div>
-      </div>
-      
-      <hr>
-
-    </header>
 
     <form class="optionsForm" action="userSurveyView.html">
       <input placeholder="Survey Title">
       <input type="button" value="Save" onclick="alert('Survey Saved')"/>
-      <input type="submit" value="Submit for Review"/>
+      <input type="submit" value="Submit for Review" onclick="alert('Successfully Submitted: Waiting for approval')"/>
       <input id="sharebutton" type="button" value="Share" onclick="share(this)"/>
     </form>
 
@@ -52,14 +41,14 @@
     </ol>
 
     <!-- This <ol> <li> is an invisble template that will be copied to create new questions-->
-      <ol>
+      <ol style="display: hidden;">
         <li id = "questionTemplate">
-          <form id = "form">
+          <form id = "answerForm">
             <input placeholder="Question">
             <label for="drpdn">Answer Type:</label>
             <select id="drpdn" name="drpdn">
               <option value="Multiple Choice">Multiple Choice</option>
-              <option value="Fill in the Blank">Fill in the Blank</option>
+              <option value="Short Answer">Short Answer</option>
               <option value="Likert Scale">Likert Scale</option>
               <option value="Picture Choice">Picture Choice</option>
             </select>

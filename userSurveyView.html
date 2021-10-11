@@ -1,63 +1,53 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+  <header>    
+    <link rel="stylesheet" href="css/style.css">
+  </header>
+
+  <div class ="heading">
     <title>Super Cool Webpage: Survey</title>
-  </head>
+    <h1 class = "head">Dr. Reevus' Droids Survey</h1>
+    <div class="headerLinks">
 
-  <body>
-    <header>
-      <h1 class = "head">Dr. Reevus' Droids Survey</h1>
-
-      <div class="headerLinks">
-
-        <form action="adminSurveyView.html">
-          <input type="submit" value="Admin Survey View" />
-        </form> 
-        <form action="userSurveyView.html">
-          <input type="submit" value="User Survey View" />
-        </form>  
-        <form action="surveyBuild.html">
-          <input type="submit" value="Build a New Survey" />
-        </form>
-        <form action="about.html">
-          <input type="submit" value="About" />
-        </form>  
-        <form action="signOut.html">
-          <input type="submit" value="Sign-Out" />
-        </form>
-        <form action="reevous.html">
-          <input type="submit" value="Reevus" />
-        </form>
-
-      </div>
-      
-      <hr>
-
-    </header>
+      <ul class="buttonlinks">
+        <li class="libutton"><a class="button" href="adminSurveyView.html">Survey Admin View</a></li>
+        <li class="libutton"><a class="button" href="userSurveyView.html">Survey User View </a></li>
+        <li class="libutton"><a class="button" href="surveyBuild.html">Build a New Survey</a></li>
+        <li class="libutton"><a class="button" href="about.html">About</a></li>
+        <li class="libutton"><a class="button" href="reevous.html">Reevous</a></li>
+        <li class="libutton"><a class="button" href="signOut.html">Sign Out</a></li>
+      </ul>
+    </div>
+    <h2>User View</h2>
+    
+    <hr>
+    </div>
 
     <h2>Surveys</h2>
-    <nav>
-      <div>
-        Date <a href="surveyBuild.html">My first survey 1</a> Submitted by Nic Approved by Brett
-        <em>This is my first survey I think its neat</em> 
-      </div>
-      <div>
-        Date <a href="surveyBuild.html">Blee Serve</a> Submitted by Brett Approved by Carter
-        <em>Awesome blee service 10/10</em> 
-      </div>
-      <div>
-        Date <a href="surveyBuild.html">Number Survey</a> Submitted by Carter Approved by Nic
-        <em> I'm losing it here</em> 
-      </div>
-    </nav>
+    <ul class = "approvedSurveys">
+      <li>
+        <div>
+          <a href="surveyBuild.html">My first survey 1</a>, <em>-This is my first survey I think its neat-</em> Date, Submitted by Nic, Approved by Brett
+        </div>
+      </li>
+
+      <li>
+        <div>
+          <a href="surveyBuild.html">Blee Serve</a>, <em>-Awesome blee service 10/10-</em> Date, Submitted by Brett, Approved by Carter
+        </div>
+      </li>
+
+      <li>
+        <div>
+          <a href="surveyBuild.html">Number Survey</a>, <em>-Im losing it here-</em> Date, Submitted by Carter, Approved by Nic
+          
+        </div>
+      </li>
+    </ul>
     
     
 
-    <form action="surveyBuild.html">
-      <input type="submit" value="Build a New Survey" />
-    </form> 
-
-    
+    <a class="buttonbottom" href="surveyBuild.html"> Build a New Survey</a>
 
   </body>
 </html>

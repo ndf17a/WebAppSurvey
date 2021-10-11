@@ -1,7 +1,98 @@
-#questionTemplate {
-    visibility: hidden;
-    position: absolute;
-    margin-top: -100px;
-    margin-left: -100px;
+
+
+#questionTemplate{
+  display: none;
+  padding-left: 0px;
 }
 
+#answerForm{
+  text-align: left;
+}
+
+#questionList ol{
+  text-align: left;
+}
+
+#questionList div{
+  text-align: left;
+}
+
+body {
+  background-color: #E9D3FF;
+  text-align: center;
+  border-top-color: white;
+  font-size: large;
+  font: italic bold 16px/32px arial, serif;
+}
+
+h1{
+	font: bold;
+	font-size: 20px;
+	text-align: left;
+}
+
+h2{
+	font: italic bold 16px/32px arial, serif;
+	font-size: 40px;
+	padding-top: 60px;
+}
+
+.heading{
+	background-color: white;
+	padding: 5px;
+}
+
+.approvedSurveys {
+  text-align: center;
+  padding-left: 0%;
+	list-style-type: none;
+}
+
+.submittedSurveys{
+  list-style-type: none;
+
+}
+
+.buttonlinks  {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #333;
+  position: absolute;
+  border-left: 10px;
+}
+
+.libutton {
+  float: left;
+}
+
+.libutton .button {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+/* Change the link color to #111 (black) on hover */
+.libutton .button:hover {
+  background-color: #111;
+}
+
+.buttonbottom {
+ 
+	display: inline-block;
+  color: white;
+  text-decoration: none;
+  background-color: #333;
+  padding: 5px;
+}
+
+.buttonbottom:hover {
+  background-color: #111;
+}
+
+.optionsForm{
+  padding: 50px;
+}
